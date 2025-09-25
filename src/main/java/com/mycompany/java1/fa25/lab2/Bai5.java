@@ -25,10 +25,16 @@ public class Bai5 {
         System.out.print("Nhap diem hoa: ");
         float hoa = scanner.nextFloat();
 
-        float diemTB = (toan + ly + hoa) / 3;
+        float diemTB = tinhDiemTb(toan, ly, hoa);
 
+        String xepLoai = xepLoai(diemTB);
+
+        System.out.printf("Sinh vien %s dat diem TB %.2f, xep loai %s", hoTen, diemTB, xepLoai);
+
+    }
+
+    public static String xepLoai(float diemTB) {
         String xepLoai = null;
-
         if (10 >= diemTB && diemTB >= 9) {
             xepLoai = "Xuat Sac";
         }
@@ -48,9 +54,12 @@ public class Bai5 {
         {
             xepLoai = "Yeu";
         }
+        return xepLoai;
+    }
 
-        System.out.printf("Sinh vien %s dat diem TB %.2f, xep loai %s", hoTen, diemTB, xepLoai);
-
+    public static float tinhDiemTb(float toan, float ly, float hoa) {
+        float diemTB = (toan + ly + hoa) / 3;
+        return diemTB;
     }
 
 }
