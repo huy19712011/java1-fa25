@@ -7,6 +7,12 @@ public class Bai5 {
     public static void main(String[] args) {
         System.out.println("Lab2 - Bai 5");
 
+        lab2Bai5();
+
+    }
+
+
+    public static void lab2Bai5() {
         // Nhap hoten, diem toan, ly, hoa
         // Tinh diem tb
         // Xep loai:
@@ -29,8 +35,7 @@ public class Bai5 {
 
         String xepLoai = xepLoai(diemTB);
 
-        System.out.printf("Sinh vien %s dat diem TB %.2f, xep loai %s", hoTen, diemTB, xepLoai);
-
+        System.out.printf("Sinh vien %s dat diem TB %.2f, xep loai %s%n", hoTen, diemTB, xepLoai);
     }
 
     public static String xepLoai(float diemTB) {
@@ -61,5 +66,6 @@ public class Bai5 {
         float diemTB = (toan + ly + hoa) / 3;
         return diemTB;
     }
+
 
 }
