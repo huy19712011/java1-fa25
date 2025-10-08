@@ -26,7 +26,18 @@ public class StudentService {
         return false;
     }
 
+    public Student findStudentById(int id) {
+        for (Student s : students) {
+            if (s.getId() == id) {
+                return s;
+            }
+        }
+        return null; // not found
+    }
+
     public boolean removeStudent(int id) {
-        return students.removeIf(s -> s.getId() == id);
+        // return students.removeIf(s -> s.getId() == id);
+
+        return students.remove(findStudentById(id));
     }
 }
