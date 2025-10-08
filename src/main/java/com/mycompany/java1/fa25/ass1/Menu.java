@@ -2,12 +2,12 @@ package com.mycompany.java1.fa25.ass1;
 
 import java.util.Scanner;
 
-public class StudentManager {
+public class Menu {
 
     private final Scanner scanner;
     private final StudentService service;
 
-    public StudentManager(StudentService service) {
+    public Menu(StudentService service) {
         this.service = service;
         this.scanner = new Scanner(System.in);
     }

@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         StudentService service = new StudentService();
-        StudentManager menu = new StudentManager(service);
+        Menu menu = new Menu(service);
         menu.show();
     }
 
